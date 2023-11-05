@@ -54,9 +54,36 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
+    const booksCollection = client.db("LibraryCatalog").collection("books");
 
-    
+    /*
+     * GET METHODS
+     */
 
+    /*
+     * POST METHODS
+     */
+
+    app.post("/book", async (req, res) => {
+      try {
+        const book = req.body;
+
+        const result = await booksCollection.insertOne(book);
+
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.send(error);
+      }
+    });
+
+    /*
+     * PUT METHODS
+     */
+
+    /*
+     * DELETE METHODS
+     */
 
     // Send a ping to confirm a successful connection
     await client.db("users").command({ ping: 1 });
