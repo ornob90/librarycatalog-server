@@ -92,6 +92,11 @@ async function run() {
         const filter = { _id: new ObjectId(id) };
 
         const updatedBook = req.body;
+
+        if (Object.keys(updatedBook).length === 0) {
+          res.status(400).send({ message: "Invalid Request" });
+        }
+
         const option = { upsert: true };
 
         const book = {
@@ -102,16 +107,50 @@ async function run() {
 
         const result = await booksCollection.updateOne(filter, book, option);
 
-        res.send(result);
+        // res.send(result);
+
+        if (result.acknowledged && result.modifiedCount > 0) {
+          res
+            .status(200)
+            .send({ success: true, message: "Updated Successfully" });
+        } else if (result.acknowledged && result.modifiedCount === 0) {
+          res.status(200).send({ success: false, message: "No Data Updated" });
+        } else {
+          res.status(400).send({ message: "Operation unsuccessful" });
+        }
       } catch (error) {
         console.log(error);
-        res.status(500).send({ message: "There was a server side error!!" });
+        res.status(500).send({ message: "There was a server side error!" });
       }
     });
 
     /*
      * DELETE METHODS
      */
+
+    app.delete("/book/:id", async (req, res) => {
+      try {
+        const { id } = req.params;
+
+        const query = { _id: new ObjectId(id) };
+        const result = await booksCollection.deleteOne(query);
+
+        console.log(result);
+
+        if (result.acknowledged && result.deletedCount === 1) {
+          res
+            .status(200)
+            .send({ success: true, message: "Deleted Successfully" });
+        } else if (result.acknowledged && result.deletedCount === 0) {
+          res.status(200).send({ success: false, message: "No Data Deleted" });
+        } else {
+          res.status(400).send({ message: "Operation unsuccessful" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("There was a server side error!!");
+      }
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("users").command({ ping: 1 });
