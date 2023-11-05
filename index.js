@@ -55,11 +55,15 @@ async function run() {
     await client.connect();
 
     const booksCollection = client.db("LibraryCatalog").collection("books");
+    const borrowedCollection = client
+      .db("LibraryCatalog")
+      .collection("borrowed");
 
     /*
      * GET METHODS
      */
 
+    // get all the books
     app.get("/books", async (req, res) => {
       try {
         const result = await booksCollection.find().toArray();
@@ -70,6 +74,7 @@ async function run() {
       }
     });
 
+    // get a single book by id
     app.get("/book/:id", async (req, res) => {
       try {
         const { id } = req.params;
@@ -89,6 +94,7 @@ async function run() {
       }
     });
 
+    // get books by category
     app.get("/books/:category", async (req, res) => {
       try {
         const { category } = req.params;
@@ -104,15 +110,51 @@ async function run() {
       }
     });
 
+    app.get("/borrowed", async (req, res) => {
+      try {
+        const result = await borrowedCollection.find().toArray();
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("There was a server side error!!");
+      }
+    });
+
     /*
      * POST METHODS
      */
 
+    // post a single book
     app.post("/book", async (req, res) => {
       try {
         const book = req.body;
 
+        if (!book || Object.keys(book).length === 0) {
+          res.status(400).send({ message: "Invalid Request" });
+        }
+
         const result = await booksCollection.insertOne(book);
+
+        if (result.acknowledged) {
+          res.status(200).send({ success: true });
+        } else {
+          res.status(500).send({ message: "There was a server side error!!" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "There was a server side error!!" });
+      }
+    });
+
+    app.post("/borrowed", async (req, res) => {
+      try {
+        const borrowedBook = req.body;
+
+        if (!borrowedBook || Object.keys(borrowedBook).length === 0) {
+          res.status(400).send({ message: "Invalid Request" });
+        }
+
+        const result = await borrowedCollection.insertOne(borrowedBook);
 
         if (result.acknowledged) {
           res.status(200).send({ success: true });
@@ -129,6 +171,7 @@ async function run() {
      * PUT METHODS
      */
 
+    // update a book by id
     app.put("/book/:id", async (req, res) => {
       try {
         const { id } = req.params;
@@ -160,7 +203,7 @@ async function run() {
         } else if (result.acknowledged && result.modifiedCount === 0) {
           res.status(200).send({ success: false, message: "No Data Updated" });
         } else {
-          res.status(400).send({ message: "Operation unsuccessful" });
+          res.status(400).send({ message: "Invalid Request" });
         }
       } catch (error) {
         console.log(error);
@@ -172,6 +215,7 @@ async function run() {
      * DELETE METHODS
      */
 
+    // delete a book by id
     app.delete("/book/:id", async (req, res) => {
       try {
         const { id } = req.params;
@@ -188,7 +232,7 @@ async function run() {
         } else if (result.acknowledged && result.deletedCount === 0) {
           res.status(200).send({ success: false, message: "No Data Deleted" });
         } else {
-          res.status(400).send({ message: "Operation unsuccessful" });
+          res.status(400).send({ message: "Invalid Request" });
         }
       } catch (error) {
         console.log(error);
