@@ -65,7 +65,42 @@ async function run() {
         const result = await booksCollection.find().toArray();
         res.send(result);
       } catch (error) {
+        console.log(error);
         res.status(500).send("There was a server side error!!");
+      }
+    });
+
+    app.get("/book/:id", async (req, res) => {
+      try {
+        const { id } = req.params;
+
+        const query = { _id: new ObjectId(id) };
+
+        const result = await booksCollection.findOne(query);
+
+        if (result) {
+          res.send(result);
+        } else {
+          res.status(404).send({ message: "Not Found" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("Operation unsuccessful");
+      }
+    });
+
+    app.get("/books/:category", async (req, res) => {
+      try {
+        const { category } = req.params;
+
+        const query = { category };
+
+        const result = await booksCollection.find(query).toArray();
+
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("Operation unsuccessful");
       }
     });
 
