@@ -110,6 +110,7 @@ async function run() {
       }
     });
 
+    // get all the borrowed books
     app.get("/borrowed", async (req, res) => {
       try {
         const result = await borrowedCollection.find().toArray();
@@ -146,6 +147,7 @@ async function run() {
       }
     });
 
+    // post a single borrowed book
     app.post("/borrowed", async (req, res) => {
       try {
         const borrowedBook = req.body;
@@ -193,6 +195,50 @@ async function run() {
         };
 
         const result = await booksCollection.updateOne(filter, book, option);
+
+        // res.send(result);
+
+        if (result.acknowledged && result.modifiedCount > 0) {
+          res
+            .status(200)
+            .send({ success: true, message: "Updated Successfully" });
+        } else if (result.acknowledged && result.modifiedCount === 0) {
+          res.status(200).send({ success: false, message: "No Data Updated" });
+        } else {
+          res.status(400).send({ message: "Invalid Request" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "There was a server side error!" });
+      }
+    });
+
+    // update a borrowed book by id
+    app.put("/borrowed/:id", async (req, res) => {
+      try {
+        const { id } = req.params;
+
+        const filter = { _id: new ObjectId(id) };
+
+        const updatedBorrowedBook = req.body;
+
+        if (Object.keys(updatedBorrowedBook).length === 0) {
+          res.status(400).send({ message: "Invalid Request" });
+        }
+
+        const option = { upsert: true };
+
+        const borrowedBook = {
+          $set: {
+            ...updatedBorrowedBook,
+          },
+        };
+
+        const result = await borrowedCollection.updateOne(
+          filter,
+          borrowedBook,
+          option
+        );
 
         // res.send(result);
 
