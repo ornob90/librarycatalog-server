@@ -1,0 +1,83 @@
+[
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674533i/23692271.jpg",
+    "name": "Sapiens: A Brief History of Humankind",
+    "quantity": 10,
+    "author_name": "Yuval Noah Harari",
+    "category": "History",
+    "short_description": "Explores the history of humankind from ancient times to the present",
+    "rating": 4.5,
+    "content": "This book delves into the history of humankind from ancient times to the present.\n- It explores the cognitive, agricultural, and scientific revolutions that shaped human history.\n- Harari examines how Homo sapiens became the dominant species and the impact of this dominance.\n- The book discusses the development of culture, politics, and societal structures throughout history.\n- Harari provides insights into how humans have shaped the world and the future of our species."
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/91oNGDxyR0L._AC_UF1000,1000_QL80_.jpg",
+    "name": "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America",
+    "quantity": 8,
+    "author_name": "Erik Larson",
+    "category": "History",
+    "short_description": "Interweaving of the true tale of the 1893 World's Fair and a serial killer",
+    "rating": 4.3,
+    "content": "This book weaves together the true tale of the 1893 World's Fair in Chicago and the story of a serial killer.\n- It explores the construction and events of the World's Columbian Exposition.\n- Intertwined with this historical event is the story of H.H. Holmes, a notorious serial killer operating during the fair.\n- The book provides a gripping account of both the architectural marvels of the fair and the sinister activities of Holmes.\n- Larson's narrative contrasts the grandeur of the fair with the darkness of the crimes committed by Holmes."
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1494279423i/2767.jpg",
+    "name": "A People's History of the United States",
+    "quantity": 12,
+    "author_name": "Howard Zinn",
+    "category": "History",
+    "short_description": "Presents American history from the perspective of the marginalized and oppressed",
+    "rating": 4.7,
+    "content": "This book presents American history from the perspective of marginalized and oppressed groups.\n- Zinn's narrative explores the history of the United States through the lens of common people, highlighting their struggles and contributions.\n- It covers topics such as labor movements, civil rights, and social justice issues often overlooked in traditional historical accounts.\n- Zinn challenges conventional historical narratives, offering a different viewpoint on pivotal events in American history.\n- The book aims to provide a more inclusive and diverse portrayal of the nation's past."
+  },
+  {
+    "image": "https://static-01.daraz.com.bd/p/b14466562534ea909ce285e1d60f206c.jpg",
+    "name": "The Silk Roads: A New History of the World",
+    "quantity": 6,
+    "author_name": "Peter Frankopan",
+    "category": "History",
+    "short_description": "Explores the history of the world through the lens of the Silk Roads",
+    "rating": 4.4,
+    "content": "This book explores the interconnected history of civilizations along the ancient trade routes known as the Silk Roads.\n- Frankopan examines the exchange of goods, ideas, and cultures that occurred along these routes.\n- The narrative covers the impact of the Silk Roads on the development of societies, economies, and cultural interactions.\n- It discusses the pivotal role these trade routes played in shaping the world and connecting diverse regions.\n- Frankopan argues for the significance of the Silk Roads in world history, presenting a fresh perspective on global interactions and their influence."
+  },
+
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1453215833i/1842.jpg",
+    "name": "Guns, Germs, and Steel: The Fates of Human Societies",
+    "quantity": 9,
+    "author_name": "Jared Diamond",
+    "category": "History",
+    "short_description": "Investigates the reasons behind the dominance of certain civilizations throughout history",
+    "rating": 4.6,
+    "content": ""
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/812bCWhIkoL._AC_UF1000,1000_QL80_.jpg",
+    "name": "1491: New Revelations of the Americas Before Columbus",
+    "quantity": 7,
+    "author_name": "Charles C. Mann",
+    "category": "History",
+    "short_description": "Explores the history of the Americas before the arrival of Christopher Columbus",
+    "rating": 4.2,
+    "content": "This book explores the factors that led to the divergent development of human societies.\n- Diamond analyzes how geographic and environmental differences influenced the course of history.\n- It examines the roles of agriculture, technology, and disease in shaping the inequalities between societies.\n- The book investigates the impact of germs, technologies, and weapons on the fates of various civilizations.\n- Diamond's theory explores the reasons behind the dominance of certain societies in the world."
+  },
+  {
+    "image": "https://static-01.daraz.com.bd/p/30e5372d26b35cb23eae30b97c2798f3.jpg",
+    "name": "The Rise and Fall of the Third Reich",
+    "quantity": 5,
+    "author_name": "William L. Shirer",
+    "category": "History",
+    "short_description": "An authoritative account of Nazi Germany and World War II",
+    "rating": 4.8,
+    "content": "This comprehensive book details the history of Nazi Germany, chronicling its rise under Adolf Hitler and its eventual collapse in World War II.\n- Shirer provides a thorough examination of the Nazi regime, from Hitler's early ambitions to the atrocities committed during the war.\n- The book delves into the political, social, and military aspects of Nazi Germany's rule.\n- Shirer's account covers the events leading to the downfall of the Third Reich, providing insights into this dark period of history."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/17/TheWrightBrothers.jpg",
+    "name": "The Wright Brothers",
+    "quantity": 11,
+    "author_name": "David McCullough",
+    "category": "History",
+    "short_description": "Chronicles the story of the inventors of the first successful airplane",
+    "rating": 4.4,
+    "content": "This book tells the story of the Wright brothers, Wilbur and Orville, and their remarkable invention of the first successful airplane.\n- McCullough provides an in-depth look at the brothers' lives, from their childhood to their groundbreaking achievements.\n- It explores the challenges they faced, their perseverance, and the pivotal moments leading to their historic flight.\n- The book highlights their innovative spirit and the impact of their invention on aviation and the world.\n- McCullough's narrative paints a vivid picture of the brothers' determination and the dawn of modern aviation."
+  }
+]

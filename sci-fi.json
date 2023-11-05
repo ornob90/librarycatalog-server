@@ -1,0 +1,82 @@
+[
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+    "name": "Dune",
+    "quantity": 15,
+    "author_name": "Frank Herbert",
+    "category": "Sci-Fi",
+    "short_description": "Set in a distant future amidst a complex interstellar society",
+    "rating": 4.7,
+    "content": "This science fiction novel by Frank Herbert is set in a distant future amidst a complex interstellar society.\n- The story follows Paul Atreides as he navigates political intrigue, power struggles, and desert environments on the planet Arrakis.\n- It explores themes of ecology, politics, religion, and the human relationship with power.\n- Herbert's narrative delves into the concept of prescience and the significance of melange, a valuable spice.\n- 'Dune' is celebrated for its world-building, intricate plot, and its influence on the science fiction genre."
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg",
+    "name": "Neuromancer",
+    "quantity": 8,
+    "author_name": "William Gibson",
+    "category": "Sci-Fi",
+    "short_description": "Pioneering novel in the cyberpunk genre exploring artificial intelligence and hacking",
+    "rating": 4.4,
+    "content": "This novel by William Gibson is a pioneering work in the cyberpunk genre, exploring artificial intelligence and hacking.\n- The story follows Case, a washed-up computer hacker hired for a last chance heist in cyberspace.\n- It depicts a future world where technology, artificial intelligence, and virtual reality intertwine.\n- Gibson's narrative delves into themes of identity, corporate power, and the impact of a hyperconnected world.\n- 'Neuromancer' is acclaimed for its vision of a dystopian future and its influence on cyberpunk literature."
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/81A8iBA0FEL._AC_UF1000,1000_QL80_.jpg",
+    "name": "The Left Hand of Darkness",
+    "quantity": 12,
+    "author_name": "Ursula K. Le Guin",
+    "category": "Sci-Fi",
+    "short_description": "A tale of diplomacy and exploration on a planet with a unique gender system",
+    "rating": 4.6,
+    "content": "This science fiction novel by Ursula K. Le Guin is set on the planet Gethen, exploring themes of gender and politics.\n- The story follows Genly Ai, an ambassador, as he navigates a world where individuals are androgynous most of the time.\n- It delves into the societal implications of a world with no fixed gender, examining cultural and political nuances.\n- Le Guin's narrative explores themes of friendship, trust, and the complexities of human nature.\n- 'The Left Hand of Darkness' is celebrated for its thought-provoking exploration of gender and identity."
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1633674942i/59239482.jpg",
+    "name": "Foundation",
+    "quantity": 10,
+    "author_name": "Isaac Asimov",
+    "category": "Sci-Fi",
+    "short_description": "About the fall of a vast galactic empire and efforts to shorten the impending dark age",
+    "rating": 4.8,
+    "content": "This science fiction novel by Isaac Asimov follows mathematician Hari Seldon's creation of the Foundation to preserve knowledge during the collapse of the Galactic Empire.\n- The story unfolds over centuries, depicting the evolution of the Foundation and its struggle to shorten the period of chaos after the empire's fall.\n- It explores themes of psychohistory, politics, and the cyclic nature of history.\n- Asimov's narrative delves into the rise and fall of civilizations and the potential to shape the future through strategic planning.\n- 'Foundation' is regarded as a classic in science fiction for its intricate world-building and exploration of social science concepts."
+  },
+  {
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404613595i/13.jpg",
+    "name": "The Hitchhiker's Guide to the Galaxy",
+    "quantity": 9,
+    "author_name": "Douglas Adams",
+    "category": "Sci-Fi",
+    "short_description": "A comedic science fiction series following the misadventures of Arthur Dent",
+    "rating": 4.5,
+    "content": "This science fiction comedy novel by Douglas Adams follows the adventures of Arthur Dent after the destruction of Earth.\n- The story revolves around Arthur's journey through space with Ford Prefect, an alien researcher for the titular guidebook.\n- It humorously explores themes of absurdity, philosophy, and the nature of the universe.\n- Adams' narrative is known for its wit, satirical elements, and unique blend of science fiction and humor.\n- 'The Hitchhiker's Guide to the Galaxy' is a beloved work in the genre, celebrated for its clever and entertaining storytelling."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d5/Snowcrash.jpg",
+    "name": "Snow Crash",
+    "quantity": 7,
+    "author_name": "Neal Stephenson",
+    "category": "Sci-Fi",
+    "short_description": "A fast-paced novel exploring a virtual reality metaverse and a neurolinguistic virus",
+    "rating": 4.3,
+    "content": "This science fiction novel by Neal Stephenson is set in a near-future America, exploring virtual reality and the digital realm.\n- The story follows Hiro Protagonist, a hacker and pizza delivery driver, as he navigates a virtual metaverse and uncovers a new computer virus called Snow Crash.\n- It delves into themes of linguistics, mythology, and the impact of technology on society.\n- Stephenson's narrative combines cyberpunk elements with a dystopian future, examining the fusion of ancient Sumerian culture and modern technology.\n- 'Snow Crash' is acclaimed for its imaginative world-building and its exploration of the intersection between technology and culture."
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71ydwV+MrxL._AC_UF894,1000_QL80_.jpg",
+    "name": "The War of the Worlds",
+    "quantity": 6,
+    "author_name": "H.G. Wells",
+    "category": "Sci-Fi",
+    "short_description": "Classic novel about a Martian invasion of Earth",
+    "rating": 4.6,
+    "content": "This science fiction novel by H.G. Wells narrates the invasion of Earth by Martians.\n- The story is set in late Victorian England and follows the experiences of an unnamed protagonist during the Martian attack.\n- It delves into themes of imperialism, technological advancements, and the vulnerabilities of human civilization.\n- Wells' narrative explores the consequences of an alien invasion and the resilience of humanity in the face of overwhelming odds.\n- 'The War of the Worlds' remains a classic in science fiction, noted for its portrayal of an extraterrestrial conflict and its societal commentary."
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/62/BraveNewWorld_FirstEdition.jpg",
+    "name": "Brave New World",
+    "quantity": 11,
+    "author_name": "Aldous Huxley",
+    "category": "Sci-Fi",
+    "short_description": "Dystopian novel exploring a future world where technology reigns supreme",
+    "rating": 4.7,
+    "content": "This dystopian novel by Aldous Huxley is set in a future world where society is controlled through technology and conditioning.\n- The story is centered around a society where citizens are genetically engineered and classified into rigid castes.\n- It delves into themes of conformity, individuality, and the dehumanizing effects of a technologically controlled world.\n- Huxley's narrative explores the clash between personal freedom and a society focused on stability and control.\n- 'Brave New World' remains a seminal work, examining the consequences of a highly regulated and homogenized society."
+  }
+]

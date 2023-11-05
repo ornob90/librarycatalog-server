@@ -1,0 +1,83 @@
+[
+  {
+    "Image": "https://m.media-amazon.com/images/I/51L+3fbhYML.jpg",
+    "Name": "The Girl with the Dragon Tattoo",
+    "Quantity": 10,
+    "Author Name": "Stieg Larsson",
+    "Category": "Thriller",
+    "Short description": "A gripping mystery involving murder, corruption, and a brilliant but troubled investigator",
+    "Rating": 4.5,
+    "Content": "This novel by Stieg Larsson follows journalist Mikael Blomkvist and hacker Lisbeth Salander in their investigation of a decades-old disappearance.\n- The story intertwines mystery, crime, and corporate intrigue as the protagonists delve into a wealthy family's secrets.\n- It explores themes of power, corruption, and the mistreatment of women.\n- Larsson's narrative delves into the complexities of the characters' lives, including Salander's troubled past and exceptional computer hacking skills.\n- 'The Girl with the Dragon Tattoo' is acclaimed for its suspenseful plot and intricate character development."
+  },
+  {
+    "Image": "https://m.media-amazon.com/images/I/71+khXHbe5L._AC_UF894,1000_QL80_.jpg",
+    "Name": "Gone Girl",
+    "Quantity": 8,
+    "Author Name": "Gillian Flynn",
+    "Category": "Thriller",
+    "Short description": "A psychological thriller exploring the complexities of a marriage amidst a mysterious disappearance",
+    "Rating": 4.3,
+    "Content": "This thriller novel by Gillian Flynn portrays the disappearance of Amy Dunne and the subsequent media scrutiny and investigation.\n- The story alternates between the perspectives of Amy and her husband Nick, revealing their troubled marriage and the events leading up to Amy's disappearance.\n- It delves into themes of manipulation, media portrayal, and the complexities of relationships.\n- Flynn's narrative skillfully unfolds a suspenseful and psychological story, keeping the reader engaged with unexpected twists.\n- 'Gone Girl' is celebrated for its gripping plot and the portrayal of complex characters."
+  },
+  {
+    "Image": "https://static-01.daraz.com.bd/p/5e09d8fa25352d71f984b4d8d908150a.jpg",
+    "Name": "The Da Vinci Code",
+    "Quantity": 12,
+    "Author Name": "Dan Brown",
+    "Category": "Thriller",
+    "Short description": "A quest to solve a murder mystery with historical and religious undertones",
+    "Rating": 4.7,
+    "Content": "This mystery thriller novel by Dan Brown follows symbologist Robert Langdon and cryptologist Sophie Neveu as they unravel a conspiracy.\n- The story revolves around the quest to solve a murder and the hunt for the Holy Grail, blending art, history, and religious symbolism.\n- It delves into themes of secret societies, religious history, and the search for hidden truths.\n- Brown's narrative leads the protagonists through a series of puzzles, codes, and historical mysteries.\n- 'The Da Vinci Code' is known for its intricate plot, controversial theories, and fast-paced storytelling."
+  },
+  {
+    "Image": "https://static-01.daraz.com.bd/p/87f572f11a88ca761a720b37e0ba7ec8.jpg",
+    "Name": "The Silent Patient",
+    "Quantity": 6,
+    "Author Name": "Alex Michaelides",
+    "Category": "Thriller",
+    "Short description": "A psychological thriller about a woman's act of violence and her subsequent silence",
+    "Rating": 4.4,
+    "Content": "This psychological thriller by Alex Michaelides follows the story of Alicia Berenson, a famous painter who shot her husband and then never spoke another word.\n- The narrative is presented through the perspective of Theo Faber, a criminal psychotherapist who becomes obsessed with treating Alicia.\n- It explores themes of trauma, secrets, and the complexities of the human mind.\n- Michaelides' narrative unravels a gripping mystery, filled with unexpected twists and a dark, haunting atmosphere.\n- 'The Silent Patient' is acclaimed for its suspenseful plot and the exploration of the human psyche."
+  },
+
+  {
+    "Image": "https://static-01.daraz.com.bd/p/448ed29e086a8505e638e776ea3c546e.jpg",
+    "Name": "The Girl on the Train",
+    "Quantity": 9,
+    "Author Name": "Paula Hawkins",
+    "Category": "Thriller",
+    "Short description": "A psychological thriller centered around an alcoholic woman and a mysterious disappearance",
+    "Rating": 4.6,
+    "Content": "This psychological thriller by Paula Hawkins follows Rachel Watson, an alcoholic divorcee who takes the same train daily, observing a couple from afar.\n- The narrative unfolds as Rachel becomes entangled in a missing person investigation involving the couple she watches.\n- It explores themes of memory, perception, and the unreliability of narratives due to alcohol-induced blackouts.\n- Hawkins' story is told from the perspectives of multiple women, offering a complex and suspenseful tale.\n- 'The Girl on the Train' is celebrated for its intricate plot and the exploration of flawed and multifaceted characters."
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1486387357i/33225794.jpg",
+    "Name": "The Silent Wife",
+    "Quantity": 7,
+    "Author Name": "A.S.A. Harrison",
+    "Category": "Thriller",
+    "Short description": "A gripping tale of a marriage in turmoil, deception, and hidden motives",
+    "Rating": 4.2,
+    "Content": "This psychological thriller by A.S.A. Harrison delves into the lives of Jodi and Todd, a seemingly perfect couple whose marriage starts to unravel.\n- The narrative unfolds as their relationship faces strain, secrets, and infidelity.\n- It explores themes of control, manipulation, and the complexities of marriage and trust.\n- Harrison's story paints a tense and psychological portrait of a disintegrating relationship.\n- 'The Silent Wife' is acclaimed for its character-driven plot and exploration of the human psyche in relationships."
+  },
+  {
+    "Image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1559835163i/33516773.jpg",
+    "Name": "Big Little Lies",
+    "Quantity": 5,
+    "Author Name": "Liane Moriarty",
+    "Category": "Thriller",
+    "Short description": "A story of secrets, lies, and murder in a tranquil suburban community",
+    "Rating": 4.8,
+    "Content": "This novel by Liane Moriarty explores the lives of three women, each with their own secrets, in a seemingly idyllic Australian suburb.\n- The narrative centers around a trivia night that ends in a murder, unravelling the complexities and dark truths of their lives.\n- It delves into themes of domestic violence, friendship, and the facades people maintain in their lives.\n- Moriarty's story weaves a compelling tale that navigates the intricacies of the women's relationships and the events leading up to the fatal night.\n- 'Big Little Lies' is celebrated for its character development and the exploration of societal expectations and hidden truths."
+  },
+  {
+    "Image": "https://upload.wikimedia.org/wikipedia/en/b/b6/BeforeIGoToSleep.jpg",
+    "Name": "Before I Go to Sleep",
+    "Quantity": 11,
+    "Author Name": "S.J. Watson",
+    "Category": "Thriller",
+    "Short description": "A psychological thriller where a woman wakes up every day with no memory of her past",
+    "Rating": 4.4,
+    "Content": "This psychological thriller by S.J. Watson follows Christine Lucas, who wakes up every day with no memory due to a rare form of amnesia.\n- The narrative unfolds as Christine navigates her life, piecing together her past through a journal she maintains each day.\n- It explores themes of memory, identity, and the search for truth amid a sense of uncertainty.\n- Watson's story is a suspenseful exploration of the mind and the unraveling of secrets and mistruths.\n- 'Before I Go to Sleep' is acclaimed for its gripping plot and the psychological tension woven into the storyline."
+  }
+]
