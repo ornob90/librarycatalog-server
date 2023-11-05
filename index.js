@@ -54,6 +54,7 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
+    const adminCollection = client.db("LibraryCatalog").collection("admin");
     const booksCollection = client.db("LibraryCatalog").collection("books");
     const borrowedCollection = client
       .db("LibraryCatalog")
@@ -144,6 +145,25 @@ async function run() {
     /*
      * POST METHODS
      */
+
+    app.post("/admin", async (req, res) => {
+      try {
+        const { email, password } = req.body;
+
+        const query = { email, password };
+
+        const result = await adminCollection.findOne(query);
+
+        if (result) {
+          res.send({ status: true });
+        } else {
+          res.status(401).send({ message: "unauthorized access" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "There was a server side error!!" });
+      }
+    });
 
     // post a single book
     app.post("/book", async (req, res) => {
