@@ -70,16 +70,44 @@ async function run() {
 
         const result = await booksCollection.insertOne(book);
 
-        res.send(result);
+        if (result.acknowledged) {
+          res.status(200).send({ success: true });
+        } else {
+          res.status(500).send({ message: "There was a server side error!!" });
+        }
       } catch (error) {
         console.log(error);
-        res.send(error);
+        res.status(500).send({ message: "There was a server side error!!" });
       }
     });
 
     /*
      * PUT METHODS
      */
+
+    app.put("/book/:id", async (req, res) => {
+      try {
+        const { id } = req.params;
+
+        const filter = { _id: new ObjectId(id) };
+
+        const updatedBook = req.body;
+        const option = { upsert: true };
+
+        const book = {
+          $set: {
+            ...updatedBook,
+          },
+        };
+
+        const result = await booksCollection.updateOne(filter, book, option);
+
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "There was a server side error!!" });
+      }
+    });
 
     /*
      * DELETE METHODS
