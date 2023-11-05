@@ -121,6 +121,26 @@ async function run() {
       }
     });
 
+    // get a borrowed book by id
+    app.get("/borrowed/:id", async (req, res) => {
+      try {
+        const { id } = req.params;
+
+        const query = { _id: new ObjectId(id) };
+
+        const result = await borrowedCollection.findOne(query);
+
+        if (result) {
+          res.send(result);
+        } else {
+          res.status(404).send({ message: "Not Found" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("Operation unsuccessful");
+      }
+    });
+
     /*
      * POST METHODS
      */
