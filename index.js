@@ -60,6 +60,15 @@ async function run() {
      * GET METHODS
      */
 
+    app.get("/books", async (req, res) => {
+      try {
+        const result = await booksCollection.find().toArray();
+        res.send(result);
+      } catch (error) {
+        res.status(500).send("There was a server side error!!");
+      }
+    });
+
     /*
      * POST METHODS
      */
