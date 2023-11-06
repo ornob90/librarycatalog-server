@@ -120,11 +120,19 @@ async function run() {
 
     // get total books count
     app.get("/numOfBooks", async (req, res) => {
-      console.log("hitted");
-      try {
-        const count = await booksCollection.estimatedDocumentCount();
+      // console.log("hitted");
 
-        res.send({ count });
+      try {
+        const query = {
+          quantity: { $gt: 0 },
+        };
+
+        const totalCount = await booksCollection.estimatedDocumentCount();
+        const availableBooks = await booksCollection.find(query).toArray();
+
+        const availableCount = availableBooks.length;
+
+        res.send({ totalCount, availableCount });
       } catch (error) {
         console.log(error);
         res.status(500).send("There was a server side error!!");
