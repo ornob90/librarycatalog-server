@@ -80,11 +80,11 @@ async function run() {
     });
 
     // get a single category detail
-    app.get("/category/:id", async (req, res) => {
+    app.get("/category/:name", async (req, res) => {
       try {
-        const { id } = req.params;
+        const { name } = req.params;
 
-        const query = { _id: new ObjectId(id) };
+        const query = { name };
 
         const result = await categoriesCollection.findOne(query);
 
