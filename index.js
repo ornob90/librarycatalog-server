@@ -79,6 +79,21 @@ async function run() {
       }
     });
 
+    // get all the categories name
+    app.get("/categories-name", async (req, res) => {
+      try {
+        const result = await categoriesCollection
+          .find()
+          .project({ name: 1 })
+          .toArray();
+
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("There was a server side error!!");
+      }
+    });
+
     // get a single category detail
     app.get("/category/:name", async (req, res) => {
       try {
