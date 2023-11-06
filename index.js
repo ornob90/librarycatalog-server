@@ -118,6 +118,19 @@ async function run() {
       }
     });
 
+    // get total books count
+    app.get("/numOfBooks", async (req, res) => {
+      console.log("hitted");
+      try {
+        const count = await booksCollection.estimatedDocumentCount();
+
+        res.send({ count });
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("There was a server side error!!");
+      }
+    });
+
     // get a single book by id
     app.get("/book/:id", async (req, res) => {
       try {
