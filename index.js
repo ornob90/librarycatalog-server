@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5000"],
+    origin: ["http://localhost:5173"],
     credentials: true,
   })
 );
@@ -55,6 +55,9 @@ async function run() {
     await client.connect();
 
     const adminCollection = client.db("LibraryCatalog").collection("admin");
+    const categoriesCollection = client
+      .db("LibraryCatalog")
+      .collection("Categories");
     const booksCollection = client.db("LibraryCatalog").collection("books");
     const borrowedCollection = client
       .db("LibraryCatalog")
@@ -63,6 +66,38 @@ async function run() {
     /*
      * GET METHODS
      */
+
+    // get all the categories
+    app.get("/categories", async (req, res) => {
+      try {
+        const result = await categoriesCollection.find().toArray();
+
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("There was a server side error!!");
+      }
+    });
+
+    // get a single category detail
+    app.get("/category/:id", async (req, res) => {
+      try {
+        const { id } = req.params;
+
+        const query = { _id: new ObjectId(id) };
+
+        const result = await categoriesCollection.findOne(query);
+
+        if (result) {
+          res.send(result);
+        } else {
+          res.status(404).send({ message: "Not Found" });
+        }
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("Operation unsuccessful");
+      }
+    });
 
     // get all the books
     app.get("/books", async (req, res) => {

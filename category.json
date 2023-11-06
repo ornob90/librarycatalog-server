@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Thriller",
+    "img": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-151584,resizemode-75,msid-101785727/top-trending-products/books/15-psychological-thriller-books.jpg",
+    "title": "Thrilling Adventures",
+    "subtitle": "Uncover Tales of Suspense",
+    "short_description": "Engage in gripping narratives full of twists and suspense."
+  },
+  {
+    "name": "History",
+    "img": "https://www.jdandj.com/uploads/8/0/0/8/80083458/book-display-for-hardback-and-printed-book-covers-webp_orig.webp",
+    "title": "Historical Chronicles",
+    "subtitle": "Explore the Past",
+    "short_description": "Immerse in rich historical accounts and captivating stories."
+  },
+  {
+    "name": "Sci-Fi",
+    "img": "https://img.freepik.com/free-photo/open-book-concept-fairy-tale-fiction-storytelling_23-2150793735.jpg",
+    "title": "Beyond Reality",
+    "subtitle": "Journey Through Futuristic Realms",
+    "short_description": "Dive into visionary worlds and unearth the future."
+  },
+  {
+    "name": "Novel",
+    "img": "https://img.freepik.com/free-vector/flat-world-book-day-banners-set_23-2148873143.jpg",
+    "title": "Captivating Novels",
+    "subtitle": "Dive into Narratives",
+    "short_description": "Engage in intriguing plots and diverse storytelling adventures."
+  }
+]
