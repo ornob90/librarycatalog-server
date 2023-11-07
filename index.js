@@ -67,6 +67,21 @@ async function run() {
      * GET METHODS
      */
 
+    // get admin details
+    app.get("/admin", async (req, res) => {
+      try {
+        const result = await adminCollection
+          .find()
+          .project({ email: 1, role: 1, _id: 0 })
+          .toArray();
+
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send("There was a server side error!!");
+      }
+    });
+
     // get all the categories
     app.get("/categories", async (req, res) => {
       try {
