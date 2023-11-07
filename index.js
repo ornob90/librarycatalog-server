@@ -190,10 +190,14 @@ async function run() {
       }
     });
 
-    // get all the borrowed books
+    // get all the borrowed books by userEmail
     app.get("/borrowed", async (req, res) => {
       try {
-        const result = await borrowedCollection.find().toArray();
+        const { email } = req.query;
+
+        const query = { email };
+
+        const result = await borrowedCollection.find(query).toArray();
         res.send(result);
       } catch (error) {
         console.log(error);
