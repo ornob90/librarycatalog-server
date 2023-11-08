@@ -244,6 +244,7 @@ async function run() {
      * POST METHODS
      */
 
+    // admin authenticate
     app.post("/admin", async (req, res) => {
       try {
         const { email, password } = req.body;
@@ -261,6 +262,35 @@ async function run() {
         console.log(error);
         res.status(500).send({ message: "There was a server side error!!" });
       }
+    });
+
+    // jwt authenticate
+    app.post("/jwt", async (req, res) => {
+      try {
+        const user = req.body;
+
+        const token = jwt.sign(user, process.env.SECRET_KEY, {
+          expiresIn: "1h",
+        });
+
+        res
+          .cookie("token", token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none",
+          })
+          .send({ success: true, token });
+      } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: "There was a server side error!!" });
+      }
+    });
+
+    // logout
+    app.post("/logout", (req, res) => {
+      const user = req.body;
+
+      res.clearCookie("token", { maxAge: 0 }).send({ success: true });
     });
 
     // post a single book
