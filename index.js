@@ -11,9 +11,9 @@ const app = express();
 app.use(
   cors({
     origin: [
-      // "http://localhost:5173",
-      "https://librarycatalog-a391a.web.app",
-      "https://librarycatalog-a391a.firebaseapp.com",
+      "http://localhost:5173",
+      "https://librarycatalog-cb000.firebaseapp.com",
+      "https://librarycatalog-cb000.web.app",
     ],
     credentials: true,
   })
@@ -72,7 +72,7 @@ async function run() {
      */
 
     // get admin details
-    app.get("/admin", verifyToken, async (req, res) => {
+    app.get("/admin", async (req, res) => {
       try {
         const result = await adminCollection
           .find()
