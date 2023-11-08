@@ -34,12 +34,12 @@ const verifyToken = (req, res, next) => {
   const token = req?.cookies?.token;
 
   if (!token) {
-    return res.status(401).send("unauthorized access");
+    return res.status(401).send("unauthorized access [no token found]");
   }
 
   jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
     if (err) {
-      return res.status(401).send("unauthorized access");
+      return res.status(401).send("unauthorized access [invalid token]");
     }
 
     req.user = decoded;
@@ -68,7 +68,7 @@ async function run() {
      */
 
     // get admin details
-    app.get("/admin", async (req, res) => {
+    app.get("/admin", verifyToken, async (req, res) => {
       try {
         const result = await adminCollection
           .find()
@@ -110,7 +110,7 @@ async function run() {
     });
 
     // get a single category detail
-    app.get("/category/:name", async (req, res) => {
+    app.get("/category/:name", verifyToken, async (req, res) => {
       try {
         const { name } = req.params;
 
@@ -130,7 +130,7 @@ async function run() {
     });
 
     // get all the books
-    app.get("/books", async (req, res) => {
+    app.get("/books", verifyToken, async (req, res) => {
       try {
         const page = parseInt(req.query.page) || 0;
         const size = parseInt(req.query.size) || 10;
@@ -149,7 +149,7 @@ async function run() {
     });
 
     // get total books count
-    app.get("/numOfBooks", async (req, res) => {
+    app.get("/numOfBooks", verifyToken, async (req, res) => {
       // console.log("hitted");
 
       try {
@@ -170,7 +170,7 @@ async function run() {
     });
 
     // get a single book by id
-    app.get("/book/:id", async (req, res) => {
+    app.get("/book/:id", verifyToken, async (req, res) => {
       try {
         const { id } = req.params;
 
@@ -190,7 +190,7 @@ async function run() {
     });
 
     // get books by category
-    app.get("/books/:category", async (req, res) => {
+    app.get("/books/:category", verifyToken, async (req, res) => {
       try {
         const { category } = req.params;
 
@@ -206,7 +206,7 @@ async function run() {
     });
 
     // get all the borrowed books by userEmail
-    app.get("/borrowed", async (req, res) => {
+    app.get("/borrowed", verifyToken, async (req, res) => {
       try {
         const { email } = req.query;
 
@@ -221,7 +221,7 @@ async function run() {
     });
 
     // get a borrowed book by id
-    app.get("/borrowed/:id", async (req, res) => {
+    app.get("/borrowed/:id", verifyToken, async (req, res) => {
       try {
         const { id } = req.params;
 
@@ -279,7 +279,7 @@ async function run() {
             secure: true,
             sameSite: "none",
           })
-          .send({ success: true, token });
+          .send({ success: true });
       } catch (error) {
         console.log(error.message);
         res.status(500).send({ message: "There was a server side error!!" });
