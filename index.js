@@ -10,7 +10,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      // "http://localhost:5173",
+      "https://librarycatalog-a391a.web.app",
+      "https://librarycatalog-a391a.firebaseapp.com",
+    ],
     credentials: true,
   })
 );
@@ -110,7 +114,7 @@ async function run() {
     });
 
     // get a single category detail
-    app.get("/category/:name", verifyToken, async (req, res) => {
+    app.get("/category/:name", async (req, res) => {
       try {
         const { name } = req.params;
 
@@ -149,7 +153,7 @@ async function run() {
     });
 
     // get total books count
-    app.get("/numOfBooks", verifyToken, async (req, res) => {
+    app.get("/numOfBooks", async (req, res) => {
       // console.log("hitted");
 
       try {
@@ -170,7 +174,7 @@ async function run() {
     });
 
     // get a single book by id
-    app.get("/book/:id", verifyToken, async (req, res) => {
+    app.get("/book/:id", async (req, res) => {
       try {
         const { id } = req.params;
 
@@ -190,7 +194,7 @@ async function run() {
     });
 
     // get books by category
-    app.get("/books/:category", verifyToken, async (req, res) => {
+    app.get("/books/:category", async (req, res) => {
       try {
         const { category } = req.params;
 
@@ -206,7 +210,7 @@ async function run() {
     });
 
     // get all the borrowed books by userEmail
-    app.get("/borrowed", verifyToken, async (req, res) => {
+    app.get("/borrowed", async (req, res) => {
       try {
         const { email } = req.query;
 
@@ -221,7 +225,7 @@ async function run() {
     });
 
     // get a borrowed book by id
-    app.get("/borrowed/:id", verifyToken, async (req, res) => {
+    app.get("/borrowed/:id", async (req, res) => {
       try {
         const { id } = req.params;
 
@@ -294,7 +298,7 @@ async function run() {
     });
 
     // post a single book
-    app.post("/book", async (req, res) => {
+    app.post("/book", verifyToken, async (req, res) => {
       try {
         const book = req.body;
 
@@ -342,7 +346,7 @@ async function run() {
      */
 
     // update a book by id
-    app.put("/book/:id", async (req, res) => {
+    app.put("/book/:id", verifyToken, async (req, res) => {
       try {
         const { id } = req.params;
 
@@ -430,7 +434,7 @@ async function run() {
      */
 
     // delete a book by id
-    app.delete("/book/:id", async (req, res) => {
+    app.delete("/book/:id", verifyToken, async (req, res) => {
       try {
         const { id } = req.params;
 
